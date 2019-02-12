@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script language="JavaScript">
+	    var clock = 0;
+	    var freq = 1000;
+	    function update() {
+	      var now = new Date();
+	      var date = now.getDate() + " - " + (now.getMonth() + 1) + " - " + now.getFullYear();
+	      var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+	      var output = 'Hoy es ' + date + ' y son las ' + time + ' horas';
+	      var place = document.getElementById('showClock');
+	      place.innerHTML = output;
+	      clock = setTimeout("update()", freq);
+	    }
+  	</script>
+	<meta charset="UTF-8">
+	<title>Relación Dates. Ejercicio 5.</title>
+</head>
+<body onLoad="update()">
+      <div id="showClock"> </div>
+</body>
+</html>

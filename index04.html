@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relación Dates. Ejercicio 4.</title>
+</head>
+<body>
+	<script> 
+        var year = Number(prompt("Introduzca un año: "));
+        var month = Number(prompt("Introduzca un mes: "));
+        month--; 
+        var day = Number(prompt("Introduzca un día: "));       
+        var date = new Date(year, month, day);
+        var timeJump = 30;
+        
+        document.write("Fecha Actual: ");
+        if (date.getDate() < 10) { 
+            document.write("0" + date.getDate());
+        } else {
+            document.write(date.getDate());
+        }
+        document.write("/");
+        if (date.getMonth() < 10) {    
+            document.write("0" + (date.getMonth() + 1));
+        } else {
+            document.write(date.getMonth() + 1);
+        }
+        document.write("/" + date.getFullYear() + ".<br>");
+        
+        for (var i = 1; i < 4; i++) {            
+            document.write("Fecha a " + (timeJump*i) + " días: ");
+            date.setMonth(date.getMonth() + 1);            
+            if (date.getDate() < 10) {                
+                document.write("0" + date.getDate());
+            } else {                
+                document.write(date.getDate());
+            }
+            document.write("/");            
+            if (date.getMonth() < 10) {                
+                document.write("0" + (date.getMonth() + 1));
+            } else {                
+                document.write(date.getMonth() + 1);
+            }            
+            document.write("/" + date.getFullYear() + ".<br>");
+        }
+	</script>
+</body>
+</html>

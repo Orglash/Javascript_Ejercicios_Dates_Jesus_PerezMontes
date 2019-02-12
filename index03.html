@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relación Dates. Ejercicio 3.</title>
+</head>
+<body>
+	<script> 
+        var month = Number(prompt("Introduzca un mes: "));
+        var year = Number(prompt("Introduzca un año: "));
+        month = month - 1;
+        var date = new Date(year, month);
+        var day = date.getDay();
+        var typeMonth;
+
+        switch (month) { 
+            case 0:
+                typeMonth = "Enero";
+                break;
+            case 1:
+                typeMonth = "Febrero";
+                break;
+            case 2:
+                typeMonth = "Marzo";
+                break;
+            case 3:
+                typeMonth = "Abril";
+                break;
+            case 4:
+                typeMonth = "Mayo";
+                break;
+            case 5:
+                typeMonth = "Junio";
+                break;
+            case 6:
+                typeMonth = "Julio";
+                break;
+            case 7:
+                typeMonth = "Agosto";
+                break;
+            case 8:
+                typeMonth = "Septiembre";
+                break;
+            case 9:
+                typeMonth = "Octubre";
+                break;
+            case 10:
+                typeMonth = "Noviembre";
+                break;
+            case 11:
+                typeMonth = "Diciembre";
+                break;
+        }
+        document.write("<h1>" + typeMonth + " - " + year + "</h1>");
+        while (date.getMonth() == month) {
+            switch (date.getDay()) { 
+                case 0:
+                    day = "domingo";
+                    break;
+                case 1:
+                    day = "lunes";
+                    break;
+                case 2:
+                    day = "martes";
+                    break;
+                case 3:
+                    day = "miercoles";
+                    break;
+                case 4:
+                    day = "jueves";
+                    break;
+                case 5:
+                    day = "viernes";
+                    break;
+                case 6:
+                    day = "sabado";
+                    break;
+            }
+            document.write(date.getDate() + "(" + day + ")<br>");
+            date.setDate(date.getDate() + 1);
+        }
+	</script>
+</body>
+</html>

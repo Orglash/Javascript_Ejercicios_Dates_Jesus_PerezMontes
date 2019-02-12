@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relación Dates. Ejercicio 1.</title>
+</head>
+<body>
+	<script> 
+		var date = new Date(); 
+        var day, month;
+        var weekday = date.getDay();   
+        var monthday = (date.getDate());   
+        var year = date.getFullYear();  
+        var hour = date.getHours();   
+        var min = date.getMinutes();
+
+        switch (weekday) {
+            case 0:
+                day = "domingo";
+                break;
+            case 1:
+                day = "lunes";
+                break;
+            case 2:
+                day = "martes";
+                break;
+            case 3:
+                day = "miercoles";
+                break;
+            case 4:
+                day = "jueves";
+                break;
+            case 5:
+                day = "viernes";
+                break;
+            case 6:
+                day = "sabado";
+                break;
+        }
+
+        switch (date.getMonth() + 1) {
+            case 1:
+                month = "Enero";
+                break;
+            case 2:
+                month = "Febrero";
+                break;
+            case 3:
+                month = "Marzo";
+                break;
+            case 4:
+                month = "Abril";
+                break;
+            case 5:
+                month = "Mayo";
+                break;
+            case 6:
+                month = "Junio";
+                break;
+            case 7:
+                month = "Julio";
+                break;
+            case 8:
+                month = "Agosto";
+                break;
+            case 9:
+                month = "Septiembre";
+                break;
+            case 10:
+                month = "Octubre";
+                break;
+            case 11:
+                month = "Noviembre";
+                break;
+            case 12:
+                month = "Diciembre";
+                break;
+        }
+           
+        if ((min >= 0) && (min < 10)) {    
+            min = "0" + min;
+        }
+        document.write("Hoy es "+day+", "+monthday+" de "+month+" de "+year+", y son las "+hour+":"+min+" horas.");		
+	</script>
+</body>
+</html>

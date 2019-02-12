@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relación Dates. Ejercicio 2.</title>
+</head>
+<body>
+	<script> 		 
+        var startDate = new Date();        
+        var startTime = startDate.getTime(); 
+        
+        var firstName = prompt("Introduzca el nombre:");
+        var lastName1 = prompt("Introduzca apellido 1:");
+        var lastName2 = prompt("Introduzca apellido 2:");
+        
+        var finishDate = new Date();     
+        var finishTime = finishDate.getTime();    
+        var tEmpleado = (finishTime - startTime) / 1000;    
+        tEmpleado = tEmpleado.toFixed(1);
+        document.write("En introducir " + firstName + " " + lastName1 + " " + lastName2 + " ha tardado " + tEmpleado + " segundos.");
+	</script>
+</body>
+</html>
